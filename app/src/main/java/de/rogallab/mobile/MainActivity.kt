@@ -25,7 +25,9 @@ class MainActivity : BaseActivity(TAG) {
    }
    companion object {
       private const val TAG = "<-MainActivity"
-      const val SCREEN_NAME = "ColorPickerScreen2"
+      const val IS_INFO = true
+      const val IS_DEBUG = true
+      const val IS_VERBOSE = true
    }
 }
 
