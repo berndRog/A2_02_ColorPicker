@@ -23,20 +23,20 @@ class MainActivity : BaseActivity(TAG) {
 
    override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(savedInstanceState)
+
       enableEdgeToEdge()
+
       setContent {
          AppTheme {
             Scaffold(
                contentWindowInsets = WindowInsets.safeDrawing,
-               modifier = Modifier.fillMaxSize()
+               modifier = Modifier
+                  .padding(horizontal = 16.dp, vertical = 8.dp)
+                  .fillMaxSize()
             ) { innerPadding ->
                SelectColorScreen1(
                   modifier = Modifier
                      .padding(paddingValues = innerPadding)
-                     .padding(paddingValues = innerPadding)
-                     .padding(horizontal = 16.dp)
-                     .padding(top = 8.dp)
-                     .fillMaxSize()
                )
             }
          }
@@ -44,9 +44,6 @@ class MainActivity : BaseActivity(TAG) {
    }
    companion object {
       private const val TAG = "<-MainActivity"
-      const val IS_INFO = true
-      const val IS_DEBUG = true
-      const val IS_VERBOSE = true
    }
 }
 
@@ -60,11 +57,7 @@ fun SelectColorScreen1Preview() {
          modifier = Modifier.fillMaxSize()
       ) { innerPadding ->
          SelectColorScreen1(
-            modifier = Modifier
-               .padding(paddingValues = innerPadding)
-               .padding(horizontal = 16.dp)
-               .padding(top = 8.dp)
-               .fillMaxSize()
+            modifier = Modifier.padding(innerPadding)
          )
       }
    }
